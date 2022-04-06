@@ -63,8 +63,8 @@ def display_news(list_of_news, news_quantity):
             news_data.download()
             news_data.parse()
             news_data.nlp()
-        except:
-            pass
+        except Exception as e:
+            st.error(e)
         fetch_news_poster(news_data.top_image)
         with st.expander(news.title.text):
             st.markdown(
