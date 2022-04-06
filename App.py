@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
 from newspaper import Article
 import io
+import nltk
+nltk.download('punkt')
 
 st.set_page_config(page_title='InNews🇮🇳: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
 
