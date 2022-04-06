@@ -121,10 +121,10 @@ def run():
         no_of_news = st.slider('Number of News:', min_value=5, max_value=15, step=1)
 
         if st.button("Search") and user_topic != '':
-            user_topic = user_topic.replace(' ', '')
-            news_list = fetch_news_search_topic(topic=user_topic)
+            user_topic_pr = user_topic.replace(' ', '')
+            news_list = fetch_news_search_topic(topic=user_topic_pr)
             if news_list:
-                st.subheader("✅ Here are the some {} News for you".format(user_topic))
+                st.subheader("✅ Here are the some {} News for you".format(user_topic.capitalize()))
                 display_news(news_list, no_of_news)
             else:
                 st.error("No News found for {}".format(user_topic))
