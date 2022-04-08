@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-import os
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
 from newspaper import Article
@@ -46,12 +45,10 @@ def fetch_news_poster(poster_link):
         u = urlopen(poster_link)
         raw_data = u.read()
         image = Image.open(io.BytesIO(raw_data))
-        image = image.resize((700, 400), )
-        st.image(image, use_column_width=False)
+        st.image(image, use_column_width=True)
     except:
         image = Image.open('./Meta/no_image.jpg')
-        image = image.resize((707, 400), )
-        st.image(image, use_column_width=False)
+        st.image(image, use_column_width=True)
 
 
 def display_news(list_of_news, news_quantity):
