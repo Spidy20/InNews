@@ -24,6 +24,7 @@ def fetch_top_news():
     site = 'https://news.google.com/news/rss'
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
+    print(rd)
     op.close()  # close the object
     sp_page = soup(rd, 'xml')  # scrapping data from site
     news_list = sp_page.find_all('item')  # finding news
@@ -53,6 +54,7 @@ def fetch_news_poster(poster_link):
 
 def display_news(list_of_news, news_quantity):
     c = 0
+    print(list_of_news)
     for news in list_of_news:
         c += 1
         # st.markdown(f"({c})[ {news.title.text}]({news.link.text})")

@@ -1,15 +1,10 @@
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
 from newspaper import Article
-import requests
 import nltk
-# Applying NLP
-# article.download()
-# article.parse()
-nltk.download('punkt')
-# article.nlp()
 
-# print(article.top_image)
+nltk.download('punkt')
+
 # By major topics
 # https://news.google.com/news/rss/headlines/section/TOPIC/SPORTS
 
@@ -18,6 +13,7 @@ nltk.download('punkt')
 
 # By Search query
 # https://news.google.com/rss/search?q={query}
+
 site = 'https://news.google.com/rss/search?q=politics'
 op = urlopen(site)  # Open that site
 rd = op.read()  # read data from site
@@ -32,7 +28,7 @@ for news in news_list:  # printing news
     news_data.download()
     news_data.parse()
     news_data.nlp()
-    print("News data",news_data.text)
-    print("News Poster",news_data.top_image)
+    print("News Summary: ",news_data.summary)
+    print("News Poster Link: ",news_data.top_image)
     print("Pub date: ",news.pubDate.text)
     print('-' * 60)
