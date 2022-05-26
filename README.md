@@ -6,10 +6,12 @@
 ## [Watch Tutorial for this project](https://youtu.be/HHYqpHwGDgQ)
 <img src="https://github.com/Spidy20/InNews/blob/master/thumb.jpg">
 
+## [Demo of App](https://share.streamlit.io/spidy20/innews/App.py)
+
 ## Source
 - For summarizing the news I have used [Newspaper3k](https://newspaper.readthedocs.io/en/latest/)
 - For scraping the news I have used Google News RSS API.
-- 
+
 ## Features
 - Trending News
 - Favorite Topics
