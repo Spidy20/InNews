@@ -7,7 +7,7 @@ import io
 import nltk
 nltk.download('punkt')
 
-st.set_page_config(page_title='InNews🇮🇳: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
+st.set_page_config(page_title='JSW NEWS: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
 
 
 def fetch_news_search_topic(topic):
